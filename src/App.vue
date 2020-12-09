@@ -1,26 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <PokemonDetail/>
+  <Filters/>
+  <PokemonList/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import "./assets/font/fontasesome/css/fontawesome.css" 
+import "./assets/font/fontasesome/css/brands.css" 
+import "./assets/font/fontasesome/css/solid.css" 
+import PokemonList from './components/PokemonList.vue'
+import PokemonDetail from './components/PokemonDetail.vue'
+import Filters from './components/Filters.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Filters,
+    PokemonDetail,
+    PokemonList
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
