@@ -1,6 +1,5 @@
 import {ref} from 'vue'
 import axios from 'axios'
-import PokemonDetails from '../../../../React/pokedex/src/components/PokemonDetails'
 const url = 'https://pokeapi.co/api/v2/pokemon'
 
 const pokemons = ref([])
