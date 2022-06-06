@@ -65,7 +65,7 @@ export default {
         display: flex;
         align-items: center;
         justify-content: left;
-        max-width: 95%;
+        max-width: 960px;
         margin-top: 1rem;
         margin-left: auto;
         margin-right: auto;

@@ -20,7 +20,7 @@
             </span>
             <span class="description-stats">
                 <ul class="list-stats">
-                    <li class="stat" v-for="(stat, index) in stats" :key="index" :data-type="stat.stat.name" :class="stat.stat.name" :data-value="stat.base_stat">
+                    <li class="stat" v-for="(stat, index) in stats" :key="index" :data-type="stat.stat.name" :class="stat.stat.name" :style="`--stat-value:${(stat.base_stat / 200) * 100 }%`">
                         {{stat.stat.name}}
                     </li>
                 </ul>
@@ -88,8 +88,10 @@
         content: " kg";
     }
     .stat {
+        --stat-value: 100%;
         padding: 1px;
-        padding-left: 4px;
+        padding-left: 8px;
+        height: 24px;
         position: relative;
         font-size: .8rem;
         color: transparent;
@@ -102,7 +104,7 @@
         .stat::after {
             content: attr(data-type);
             position: absolute;
-            left: 4px;
+            left: 16px;
             top: 50%;
             transform: translateY(-50%);
             color: white;
@@ -113,11 +115,11 @@
             display: block;
             position: absolute;
             height: 100%;
-            width: attr(data-value percentage);
+            width: var(--stat-value);
             top: 0;
             left: 0;
             z-index: 100;
-            background-color: rgba(107, 211, 230, .4);
+            background-color: rgba(107, 211, 230, .8);
         }
             .description-type.fire {
                 background-color: #FE7E25;            

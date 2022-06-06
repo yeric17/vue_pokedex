@@ -66,10 +66,9 @@ export default {
 <style>
     .pokemon-detail{
         padding-top: .5rem;
-        max-width: 95%;
+        max-width: 960px;
         margin-left: auto;
         margin-right: auto;
-        /*position: fixed;*/
         z-index: 1000;
         top: 0;
         background-color: white;

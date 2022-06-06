@@ -37,6 +37,10 @@
 </script>
 
 <style>
+    .pokemon-list{
+        max-width: 960px;
+        margin: 0 auto;
+    }
     .pokemon-gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
