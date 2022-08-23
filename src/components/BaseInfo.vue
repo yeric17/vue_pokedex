@@ -34,16 +34,22 @@
     }
     .base-info {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(50%,1fr));
+        width: 100%;
         justify-content: center;
+        padding-inline: 1rem;
     }
         .base-info-image{
             text-align: right;
+            display: block;
+            height: 100%;
             width: 100%;
-            flex-grow: 1;
+            max-height: 300px;
         }
             .base-info-image img{
-                max-width: 250px;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
             }
         .description-types{
             display: flex;

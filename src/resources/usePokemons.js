@@ -41,7 +41,6 @@ const usePokemons =  function(){
         response.data["types"] = response.data.types.map(item=>{
             return item.type.name
         })
-        console.log(response.data)
         pokemonDetails.value = response.data
     }
 
@@ -52,8 +51,11 @@ const usePokemons =  function(){
         })
     }
     const sortPokemons = async function(mode) {
-        if(mode==="Name A-Z") {
+        const modeLower = mode.toLowerCase()
+        console.log(modeLower)
+        if(modeLower==="name a-z") {
             filteredPokemons.value = filteredPokemons.value.sort((a ,b)=>{
+                
                 if(a.name > b.name) return 1
                 if(a.name < b.name) return -1
                 return 0

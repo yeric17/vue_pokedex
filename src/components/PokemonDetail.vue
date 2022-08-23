@@ -8,26 +8,16 @@
                 {{pokemonDetails.name}}
             </span>
         </div>
-        <div class="pokemon-slider">
-            <swiper
-                :slides-per-view="1"
-                :pagination="{ clickable: true }"
-            >
-                <swiper-slide>
-                    <BaseInfo 
-                    :src="pokemonDetails.img" 
-                    :alt="pokemonDetails.name"
-                    :types="pokemonDetails.types"
-                    :stats="pokemonDetails.stats"
-                    :height="pokemonDetails.height"
-                    :weight="pokemonDetails.weight"
-                    />
-                </swiper-slide>
-                <swiper-slide>Slide 2</swiper-slide>
-                <swiper-slide>Slide 3</swiper-slide>
-                ...
-            </swiper>
-        </div>
+        
+        <BaseInfo 
+        :src="pokemonDetails.img" 
+        :alt="pokemonDetails.name"
+        :types="pokemonDetails.types"
+        :stats="pokemonDetails.stats"
+        :height="pokemonDetails.height"
+        :weight="pokemonDetails.weight"
+        />
+        
     </section>
 </template>
 
@@ -67,6 +57,7 @@ export default {
     .pokemon-detail{
         padding-top: .5rem;
         max-width: 960px;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         z-index: 1000;
@@ -76,11 +67,13 @@ export default {
         .pokemon-identity{
             display: flex;
             margin-bottom: 1rem;
+            align-items: center;
+            padding-inline: 1rem;
         }
             .identity-number {
-                font-size: 1.3rem;
-                color: gray;
-                padding: .5rem;
+                font-size: 3rem;
+                font-weight: 900;
+                color: lightblue;
                 margin-right: 1rem;
             }
                 .identity-number::before {

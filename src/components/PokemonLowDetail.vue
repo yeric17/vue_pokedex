@@ -29,18 +29,24 @@
         width: 40px;
         border-radius: 5px;
     }
+    .pokemon-image{
+        width: 100%;
+        height: 100%;
+        background-color: #d4d4d4;
+        border-radius: 5px;
+        object-fit: cover;
+        transition: scale .3s;
+    }
+    .pokemon:hover .pokemon-image {
+        scale: 1.2;
+    }
     .pokemon-number{
-        font-size: .5rem;
+        font-size: .7rem;
         text-align: center;
         font-weight: 500;
         color: rgb(158, 158, 158);
     }
-    .pokemon-image{
-        width: 100%;
-        height: 40px;
-        background-color: #d4d4d4;
-        border-radius: 5px;
-    }
+
     .pokemon-image img {
         width: 100%;
     }

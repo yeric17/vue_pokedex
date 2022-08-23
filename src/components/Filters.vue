@@ -9,7 +9,6 @@
                 <ul class="filters-by-list" :class="active && 'active'">
                     <li class="filters-by-list-item" @click="selectSortType">Number</li>
                     <li class="filters-by-list-item" @click="selectSortType">Name A-Z</li>
-                    <li class="filters-by-list-item" @click="selectSortType">Heviers</li>
                 </ul>
             </div>
         </div>
@@ -64,11 +63,14 @@ export default {
     .filters{
         display: flex;
         align-items: center;
-        justify-content: left;
+        justify-content: space-between;
+        width: 100%;
         max-width: 960px;
         margin-top: 1rem;
         margin-left: auto;
         margin-right: auto;
+        padding: 1rem;
+        border-top: 1px solid rgb(206, 205, 205);
     }
     .filters-by-button{
         display: flex;
@@ -78,8 +80,10 @@ export default {
         padding-left: .5rem;
         padding-right: .5rem;
         min-height: 1.5rem;
-        background-color: rgb(133, 133, 133);
+        border: 1px solid #e2e2e2;
         position: relative;
+        border-radius: 4px;
+        margin-top: .5rem;
     }
     .filters-by-button::after{
         content: "+";
@@ -88,21 +92,25 @@ export default {
         transition: all .3s;
         list-style: none;
         transform-origin: top left;
-        padding-left: .5rem;
-        padding-right: .5rem;
         transform: translateY(100%);
         position: absolute;
         height: 0;
         overflow: hidden;
         z-index: 100;
         width: 100%;
-        background-color: rgb(133, 133, 133);
+        background-color: #e2e2e2;
         bottom: 1px;
         left: 0;
         /* display: none; */
     }
     .filters-by-list-item {
+        padding-left: .5rem;
+        padding-right: .5rem;
         margin-top: .2rem;
+        cursor: pointer;
+    }
+    .filters-by-list-item:hover{
+        background-color: #cccccc;
     }
     .filters-by-list.active{
         /* display: block; */
@@ -123,6 +131,7 @@ export default {
             height: 1rem;
             width: 1rem;
             cursor: pointer;
+            color: rgb(170, 170, 170);
         }
         .filters-search-input {
             outline: none;

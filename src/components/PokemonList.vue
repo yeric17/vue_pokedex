@@ -16,7 +16,6 @@
 <script>
     import usePokemons from '../resources/usePokemons.js'
     import PokemonLowDetail from './PokemonLowDetail.vue'
-    import axios from 'axios'
     export default {
         name: "PokemonList",
         components: {
@@ -40,16 +39,19 @@
     .pokemon-list{
         max-width: 960px;
         margin: 0 auto;
+        width: 100%;
+        overflow-y: scroll;
     }
     .pokemon-gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-        gap: 1px .5rem;
-        max-width: 95%;
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+        grid-auto-rows: 40px;
+        gap: 1rem .5rem;
         margin-left: auto;
         margin-right: auto;
         margin-top: 1rem;
         padding-top: .5rem;
+        padding-inline: 1rem;
         background-color: rgb(248, 248, 248);
         border-radius: 2px;
 
